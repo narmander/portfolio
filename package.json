@@ -1,0 +1,38 @@
+{
+  "name": "narfolio",
+  "version": "1.0.0",
+  "description": "nar's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest test",
+    "build": "tsc && webpack -p --progress --config webpack.config.js --mode=production --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/narmander/portfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "nar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/narmander/portfolio/issues"
+  },
+  "homepage": "https://github.com/narmander/portfolio#readme",
+  "devDependencies": {
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
+}

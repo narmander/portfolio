@@ -1,9 +1,10 @@
-from flask import render_template
-from app import site
+from flask import render_template, Blueprint
+
+hello_blueprint = Blueprint('hello', __name__)
 
 
-@site.route('/')
-@site.route('/index')
+@hello_blueprint.route('/')
+@hello_blueprint.route('/index')
 def index():
     user = {'username': 'Nar'}
     posts = [
@@ -16,4 +17,4 @@ def index():
             'body': 'I like deep sleep~'
         }
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    return render_template('.]/templates/index.html', title='Home', user=user, posts=posts)
