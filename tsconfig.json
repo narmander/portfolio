@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
     "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./dist/",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "Components/*": ["client/components/*"],
+      "Svgs/*": ["client/assets/svgs/*"],
+      "Styles/*": ["client/assets/styles/*"]
+    },
+    "sourceMap": true,
     "target": "es6",
-    "jsx": "react"
+    "jsx": "react",
+    "allowJs": true,
   },
   "include": ["client/**/*"],
   "exclude": ["node_modules"]

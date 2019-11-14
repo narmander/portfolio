@@ -1,18 +1,26 @@
 const path = require('path');
+const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
-  mode: 'production',
-  entry: './client/index.tsx',
+  mode: 'development',
+  entry: './client',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/',
   },
   // Enable sourcemaps for debugging webpack's output.
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   resolve: {
-    // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ['.ts', '.tsx'],
+    alias: {
+      Components: path.resolve(__dirname, 'client/components/'),
+      Svgs: path.resolve(__dirname, 'client/assets/svgs/'),
+      Styles: path.resolve(__dirname, 'client/assets/styles/'),
+    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    plugins: [
+      new TsConfigPathsPlugin()
+   ],
   },
   module: {
     rules: [
@@ -22,6 +30,10 @@ module.exports = {
         use: [
           {
             loader: 'awesome-typescript-loader',
+            options: {
+              transpileOnly: true,
+              experimentalWatchApi: true,
+            },
           },
         ],
       },
@@ -32,9 +44,5 @@ module.exports = {
         loader: 'source-map-loader',
       },
     ],
-  },
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
   },
 };

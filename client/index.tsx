@@ -1,9 +1,9 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Hello } from './Hello';
+import { Nav } from 'Components/Nav';
 
 ReactDOM.render(
-  <Hello compiler="TypeScript" framework="React" />,
+  <Nav compiler="TypeScript" framework="React" />,
   document.getElementById('main')
 );

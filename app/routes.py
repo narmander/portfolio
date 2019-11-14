@@ -17,4 +17,4 @@ def index():
             'body': 'I like deep sleep~'
         }
     ]
-    return render_template('.]/templates/index.html', title='Home', user=user, posts=posts)
+    return render_template('index.html', title='Home', user=user, posts=posts)

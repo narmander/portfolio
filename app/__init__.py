@@ -1,6 +1,6 @@
-from flask import Flask, Blueprint
+from flask import Flask
 from app import routes
 
-app = Flask(__name__,template_folder="/templates/index.html", static_folder="../dist", static_url_path="")
+app = Flask(__name__,template_folder="templates", static_folder="../dist")
 
 app.register_blueprint(routes.hello_blueprint)
