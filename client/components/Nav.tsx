@@ -1,15 +1,24 @@
 import * as React from 'react';
+import styled from "styled-components";
 import { Fork } from 'Svgs/Fork';
-console.log('nav nav nav please');
+
+const ForkHeaderStyled = styled.h2`
+  height: 50px;
+`;
+
+
 export const Nav = () => (
   <header>
     <nav>
-      <h2>Narmander.js</h2>
+      <ForkHeaderStyled>Narmander.js</ForkHeaderStyled>
       <span>
         <span>About</span>
         <span>Projects</span>
         <span>Contact</span>
+        <span>BBro</span>
+        <span>BBro</span>
       </span>
     </nav>
+    <Fork />
   </header>
 );

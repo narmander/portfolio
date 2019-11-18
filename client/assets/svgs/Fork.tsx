@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const ForkStyles = styled.svg`
   height: 50px;
+  width: 100px;
 `;
 
 export const Fork = forwardRef((props, ref) => {

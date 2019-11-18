@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest test",
-    "webpack": "webpack",
     "webpack-dev-server": "webpack-dev-server",
+    "webpack": "webpack",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
     "prod": "npm run webpack -- --env.mode production",
+    "dev": "npm run webpack-dev-server -- --env.mode development",
     "prod:debug": "npm run debug -- --env.mode production",
-    "dev": "npm run webpack-dev-server -- --env.mode development --watch",
-    "dev:debug": "npm run debug -- --env.mode development",
-    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js"
+    "dev:debug": "npm run debug -- --env.mode development"
   },
   "repository": {
     "type": "git",
