@@ -16,6 +16,7 @@ export const Nav = (props: NavProps) => (
         <span>Contact</span>
       </span>
       <Fork />
+
       <Fork />
       <Fork />
     </nav>
