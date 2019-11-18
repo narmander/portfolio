@@ -4,6 +4,6 @@ import * as ReactDOM from 'react-dom';
 import { Nav } from 'Components/Nav';
 
 ReactDOM.render(
-  <Nav compiler="TypeScript" framework="React" />,
+  <Nav />,
   document.getElementById('main')
 );

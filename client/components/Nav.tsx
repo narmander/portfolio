@@ -1,12 +1,7 @@
 import * as React from 'react';
 import { Fork } from 'Svgs/Fork';
 
-export interface NavProps {
-  compiler: string;
-  framework: string;
-}
-
-export const Nav = (props: NavProps) => (
+export const Nav = () => (
   <header>
     <nav>
       <h2>Narmander.js</h2>
@@ -15,10 +10,7 @@ export const Nav = (props: NavProps) => (
         <span>Projects</span>
         <span>Contact</span>
       </span>
-      <Fork />
-
-      <Fork />
-      <Fork />
     </nav>
+    <Fork />
   </header>
 );

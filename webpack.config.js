@@ -10,12 +10,17 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.css$/, use: "css-loader" },
-      { test: /\.ts$/, use: "ts-loader" },
-      { test: /\.ts(x?)$/, exclude: /node_modules/, use: "ts-loader" }
-    ]
+      { test: /\.ts(x?)$/, use: "ts-loader" },
+      { test: /\.js$/, use: "babel-loader" },
+      { test: /\.css$/, use: "css-loader" }
+    ],
   },
   resolve: {
+    alias: {
+      Components: path.resolve(__dirname, "client/components/"),
+      Svgs: path.resolve(__dirname, "client/assets/svgs/"),
+      Styles: path.resolve(__dirname, "client/assets/styles/")
+    },
     extensions: [".ts", ".tsx", ".js", ".jsx"]
   }
 };
