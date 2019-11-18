@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Fork } from 'Svgs/Fork';
-
+console.log('nav nav nav please');
 export const Nav = () => (
   <header>
     <nav>
@@ -11,6 +11,5 @@ export const Nav = () => (
         <span>Contact</span>
       </span>
     </nav>
-    <Fork />
   </header>
 );
